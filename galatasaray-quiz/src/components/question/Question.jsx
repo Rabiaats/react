@@ -40,6 +40,3 @@ const Question = ({ question, choices, answer, id, setScore, show, close}) => {
 };
 
 export default Question;
-
-//! parent da bulunan bir state i child a gondermek (prop drilling)
-//! lifting state up -> parentta bulunan state in değerini bir alt componentte değiştiriyorsak
