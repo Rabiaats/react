@@ -22,8 +22,9 @@ const InterviewAccord = ({quiz, setScore, setFinish}) => {
           <Question key={question.id} {...question} setScore={setScore} close={close} show={show}/>
         ))
       }
-      <div>
+      <div className="d-flex flex-column align-items-center">
         <img src={img} alt="img" onClick={isClicked ? null : handleClick} className={`finish ${isClicked ? "" : "over"}`} style={{ cursor: isClicked ? "default" : "pointer" }}></img>
+        <span className="fs-4 text-white">Sonucu görmek için ambleme tıkla</span>
       </div>
     </Container>
   )
