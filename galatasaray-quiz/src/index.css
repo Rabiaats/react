@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Cinzel:wght@400..900&family=Pathway+Gothic+One&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url(../public/back.jpg) no-repeat center center / cover;
+  background-attachment: fixed;
+  height: 100vh;
+  backdrop-filter: blur(3px);
+
+}
+
+body::-webkit-scrollbar{
+  display: none;
+}
+
+.question-card{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-radius: 10px;
+  padding: 1rem;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.7);
+}
+
+.question-content{
+  /* d-flex justify-content-between align-items-baseline */
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.bi{
+  fill: white;
+}
+
+input[type="radio"] {
+  -webkit-appearance: none; /* Tarayıcı varsayılan stilini kaldır */
+  appearance: none; /* Tarayıcı varsayılan stilini kaldır */
+  background-color: transparent; /* Arka planı beyaz yap */
+  border: 2px solid rgb(196, 1, 1); /* Sınır ekle */
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+input[type="radio"]:checked {
+  /* background-color: rgb(255, 208, 0); */
+  background-color: rgb(196, 1, 1);
+}
+
+.false{
+  background-color: rgba(255, 0, 0, 0.5);
+}
+
+.true{
+  background-color: rgba(0, 128, 0, 0.5);
+}
+
+.answer{
+  background-color: rgba(128, 128, 128, 0.5);
+}
+
+input[type="radio"]:disabled{
+  cursor: auto;
+}
+
+.finish {
+  width: 100px;
+  cursor: pointer;
+}
+
+.over:hover{
+  transform: scale(1.2);
+}
+
+.true-answer{
+  box-shadow: 0 0 10px 1px red; 
+  margin-top: 10px;
+  width: fit-content;
+  border-radius: 1rem;
+  padding: 0 10px;
+}
