@@ -7,7 +7,7 @@ function MyModal({handleClose, show, score}) {
     <>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title className='fs-2'>{score > 8 ? "Nice" : score > 5 ? "Not Bad" : "Cık Cık ... You are not from Galatasaray !!"}</Modal.Title>
+          <Modal.Title className='fs-2'>{score > 8 ? "Nice" : score > 5 ? "Not Bad" : "👎👎👎"}</Modal.Title>
         </Modal.Header>
         <Modal.Body className='fs-3'>Score : {score}</Modal.Body>
         <Modal.Footer>
