@@ -10,7 +10,7 @@ const Homepage = () => {
 
     useEffect(() => {
         const toggleVisibility = () => {
-          if (window.pageYOffset > 300) { // Ekran 300px aşağı kayarsa
+          if (window.pageYOffset > 300) {
             setIsVisible(true);
           } else {
             setIsVisible(false);
@@ -32,7 +32,7 @@ const Homepage = () => {
     const handleClick = () => {
         window.scrollTo({
             top: 0,
-            behavior: 'smooth' // kaydırmanın yumuşak bir şekilde olması
+            behavior: 'smooth'
         })
     }
     return (
