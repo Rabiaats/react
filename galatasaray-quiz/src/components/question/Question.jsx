@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import Choice from "./Choice";
 
-const Question = ({ question, choices, answer, id, setScore, show, close}) => {
+const Question = ({ question, choices, answer, id, setScore, show, close }) => {
   const [selected, setSelected] = useState("");
   const hasRun = useRef(false);
 
@@ -9,8 +9,8 @@ const Question = ({ question, choices, answer, id, setScore, show, close}) => {
     setSelected(e.target.value);
   };
 
-  if(show && (selected === answer) && !hasRun.current){
-    setScore(item => item + 1)
+  if (show && selected === answer && !hasRun.current) {
+    setScore((item) => item + 1);
     hasRun.current = true;
   }
 
@@ -32,7 +32,11 @@ const Question = ({ question, choices, answer, id, setScore, show, close}) => {
           </form>
         </div>
       </div>
-      <div className={`true-answer ${selected === answer ? "true" : selected === "" ? "answer" : "false"}`}>
+      <div
+        className={`true-answer ${
+          selected === answer ? "true" : selected === "" ? "answer" : "false"
+        }`}
+      >
         {show && <p className="fs-5 mt-2">{answer}</p>}
       </div>
     </div>

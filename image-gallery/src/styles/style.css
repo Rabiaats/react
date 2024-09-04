@@ -2,19 +2,19 @@
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   padding: 1rem;
 }
 
-body::-webkit-scrollbar{
+body::-webkit-scrollbar {
   display: none;
 }
 
-.homepage{
+.homepage {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -42,7 +42,7 @@ h1 {
   color: blue;
 }
 
-.navbar{
+.navbar {
   width: 100%;
   border-bottom: 1px solid;
   display: flex;
@@ -55,13 +55,13 @@ h1 {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .pictures .picture {
@@ -87,7 +87,7 @@ h1 {
 
 .pictures .picture .imageContainer img:hover {
   -webkit-transform: scale(1.25);
-          transform: scale(1.25);
+  transform: scale(1.25);
 }
 
 .pictures .picture .info {
@@ -95,12 +95,12 @@ h1 {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   padding: 1rem;
 }
 
-button{
+button {
   padding: 0.5rem 1rem;
   outline: none;
   border: none;
@@ -111,14 +111,14 @@ button{
   cursor: pointer;
 }
 
-.fixed{
+.fixed {
   position: fixed;
   bottom: 1rem;
   right: 0.5rem;
   background-color: black;
 }
 
-.footer{
+.footer {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
