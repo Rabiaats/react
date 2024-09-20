@@ -24,7 +24,7 @@ export default function Navbar() {
             To Do List
           </Typography>
           <Button onClick={handleOpen} sx={{color:"black", width:"100px", fontSize:"1rem", fontWeight:"bold", marginRight:"2rem"}}>Add <PlaylistAddIcon fontSize='large' sx={{marginLeft:"5px"}}/></Button>
-          <Modal open={open} handleClose={handleClose} info={info} setInfo={setInfo} toDoFunc={createToDo}/>
+          <Modal open={open} handleClose={handleClose} info={""} setInfo={setInfo} toDoFunc={createToDo}/>
         </Toolbar>
       </AppBar>
     </Box>
