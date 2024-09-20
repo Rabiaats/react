@@ -10,7 +10,7 @@ import { useToDoContext } from '../context/ToDoProvider';
 
 export default function Navbar() {
 
-  const {info, setInfo, createToDo} = useToDoContext();
+  const {setInfo, createToDo} = useToDoContext();
 
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
