@@ -11,7 +11,7 @@ const ToDoList = () => {
   const { todos, deleteToDo, editToDo, info, setInfo } = useToDoContext();
 
   const getRowClassName = (params) => {
-    return params.row.isPriority ? "priority-true" : "priority-false";
+    return params.row.isPriority === "baslangıc" ? "priority-baslangıc" : params.row.isPriority ? "priority-true" : "priority-false";
   };
 
   const [open, setOpen] = useState(false);
@@ -81,14 +81,18 @@ const ToDoList = () => {
         margin: "auto",
         boxShadow: "0 0 15px 1px black",
         borderRadius: "1rem",
+        backgroundColor:"lightgray"
       }}
     >
       <style>{`
         .priority-true {
-          background-color: red;
+          background-color: #be3144;
         }
         .priority-false {
-          background-color: lightgreen;
+          background-color: yellowgreen;
+        }
+        .priority-baslangıc {
+          background-color: white;
         }
       `}</style>
       <DataGrid
