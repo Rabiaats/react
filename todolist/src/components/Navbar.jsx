@@ -23,7 +23,7 @@ export default function Navbar() {
           <Typography variant="h3" component="div" sx={{ flexGrow: 1 , textAlign:"center", padding:"1rem", color:"black", fontWeight:"bold"}}>
             To Do List
           </Typography>
-          <Button onClick={handleOpen} sx={{color:"black", width:"100px", fontSize:"1rem", fontWeight:"bold"}}>Add <PlaylistAddIcon fontSize='large' sx={{marginLeft:"5px"}}/></Button>
+          <Button onClick={handleOpen} sx={{color:"black", width:"100px", fontSize:"1rem", fontWeight:"bold", marginRight:"2rem"}}>Add <PlaylistAddIcon fontSize='large' sx={{marginLeft:"5px"}}/></Button>
           <Modal open={open} handleClose={handleClose} info={info} setInfo={setInfo} toDoFunc={createToDo}/>
         </Toolbar>
       </AppBar>
