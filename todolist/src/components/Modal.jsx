@@ -1,6 +1,13 @@
 import * as React from "react";
 import Modal from "@mui/material/Modal";
-import { Box, TextField, Button, Checkbox, FormGroup, FormControlLabel } from "@mui/material";
+import {
+  Box,
+  TextField,
+  Button,
+  Checkbox,
+  FormGroup,
+  FormControlLabel,
+} from "@mui/material";
 import { Field, Form, Formik } from "formik";
 import * as Yup from "yup";
 import { red } from "@mui/material/colors";
@@ -17,24 +24,28 @@ const style = {
   p: 4,
 };
 
-export default function BasicModal({ open, handleClose, info, setInfo, toDoFunc}) {
-
+export default function BasicModal({
+  open,
+  handleClose,
+  info,
+  setInfo,
+  toDoFunc,
+}) {
+  
   const validationSchema = Yup.object({
-    title: Yup.string().required("Please enter something"),
+    title: Yup.string().trim().required("Please enter something"),
     date: Yup.string().required("Please enter a date"),
   });
 
   const handleSubmit = (values) => {
-    if(info.id){
-    toDoFunc(info.id, values);
-
-    }else{
-
+    if (info.id) {
+      toDoFunc(info.id, values);
+    } else {
       toDoFunc(values);
     }
-    setInfo("")
+    setInfo("");
     handleClose();
-  }
+  };
 
   return (
     <div>
@@ -80,18 +91,22 @@ export default function BasicModal({ open, handleClose, info, setInfo, toDoFunc}
                   helperText={touched.date && errors.date}
                 />
                 <FormGroup>
-                  <FormControlLabel sx={{color: red[600]}}
-                    control={<Checkbox
-                      checked={values.isPriority}
-                      onChange={(e) => setFieldValue("isPriority", e.target.checked)}
-                      sx={{
-                        color: red[800],
-                        '&.Mui-checked': {
-                          color: red[600],
-                        },
-                      }}
-                    />
-                  }
+                  <FormControlLabel
+                    sx={{ color: red[600] }}
+                    control={
+                      <Checkbox
+                        checked={values.isPriority}
+                        onChange={(e) =>
+                          setFieldValue("isPriority", e.target.checked)
+                        }
+                        sx={{
+                          color: red[800],
+                          "&.Mui-checked": {
+                            color: red[600],
+                          },
+                        }}
+                      />
+                    }
                     label="Priority"
                   />
                 </FormGroup>
