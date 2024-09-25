@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: rgb(171, 170, 190);
+  background: linear-gradient(
+    90deg,
+    rgba(180, 160, 100, 0.5) 0%,
+    rgba(170, 170, 110, 0.5) 100%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+
+@media screen and (max-width: 950px) {
+  .basketImage {
+    width: 500px !important;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .basketImage {
+    width: 300px !important;
+  }
+}
