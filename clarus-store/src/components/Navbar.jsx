@@ -5,7 +5,7 @@ import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import Badge from "@mui/material/Badge";
 import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { Container } from "@mui/material";
 
@@ -45,17 +45,16 @@ export default function Navbar() {
           </Typography>
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { md: "flex" } }}>
-            <Link to="/basket">
             <IconButton
               size="large"
               aria-label="show 17 new notifications"
               color="white"
+              onClick={() => navigate("/basket")}
             >
               <Badge badgeContent={count} color="error">
                 <ShoppingBasketIcon />
               </Badge>
             </IconButton>
-            </Link>
           </Box>
         </Toolbar>
       </Container>
