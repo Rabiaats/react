@@ -8,6 +8,6 @@ const rootReducer = combineReducers({
 
 export const store = createStore(rootReducer);
 
-store.subscribe(() => {
-  saveLocalStorage(store.getState().basket);
-});
+// store.subscribe(() => {
+//   saveLocalStorage(store.getState().basket);
+// });

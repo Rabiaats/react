@@ -7,7 +7,7 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { Box } from "@mui/material";
 import { useDispatch } from "react-redux";
-import { add, remove } from "../redux/action/basketAction";
+import { add, remove} from "../redux/action/basketAction";
 import { useSelector } from "react-redux";
 
 const BasketCard = ({ product }) => {
@@ -15,14 +15,15 @@ const BasketCard = ({ product }) => {
 
   const { basket } = useSelector((state) => state.basket);
 
+  
   const handleUpdate = (productId, quantity) => {
     if (quantity === 0) {
       dispatch(remove(productId));
     } else {
       const update = basket.map((item) =>
         item.id === product.id ? { ...item, quantity } : item
-      );
-      dispatch(add(update));
+    );
+    dispatch(add(update));
     }
   };
 

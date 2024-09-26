@@ -1,8 +1,8 @@
 import { ADD, REMOVE, CLEAR } from "../type/basketType";
 
 const initialState = {
-  basket: JSON.parse(localStorage.getItem("basket")).basket || [],
-  count: JSON.parse(localStorage.getItem("basket")).basket.length || 0,
+  basket: [],
+  count: 0,
 };
 
 const reducer = (state = initialState, { type, payload }) => {
