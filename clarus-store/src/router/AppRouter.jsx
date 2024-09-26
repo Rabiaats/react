@@ -15,10 +15,10 @@ const AppRouter = () => {
           </>
         }
       >
-        <Route path="/" element={<Home />} />
-        <Route path="/basket" element={<Basket />} />
+        <Route path="/" element={<Home/>} />
+        <Route path="/basket" element={<Basket/>} />
       </Route>
-      <Route path="*" element={<NotFound />} />
+      <Route path="*" element={<NotFound/>} />
     </Routes>
   );
 };
